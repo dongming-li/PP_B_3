@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/course_information"
+                android:layout_margin="3dp"/>
+
+            <EditText
+                android:id="@+id/course_number_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Number"
+                android:inputType="text"
+                android:textSize="21sp"/>
+
+            <EditText
+                android:id="@+id/course_name_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/course_name"
+                android:inputType="text"
+                android:textSize="21sp"/>
+
+            <EditText
+                android:id="@+id/course_location_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/location"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:textSize="21sp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview1"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meeting Times"
+                android:layout_margin="3dp"/>
+
+            <TableLayout
+                android:id="@+id/class_time_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Class Time"
+                    android:textSize="16sp"
+                    android:layout_margin="3dp"/>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <CheckBox
+                        android:id="@+id/mondayClass"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="M" />
+
+                    <CheckBox
+                        android:id="@+id/tuesdayClass"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="T" />
+
+                    <CheckBox
+                        android:id="@+id/wednesdayClass"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="W" />
+
+                    <CheckBox
+                        android:id="@+id/thursdayClass"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="R" />
+
+                    <CheckBox
+                        android:id="@+id/fridayClass"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="F" />
+                </TableRow>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <TextView android:text="Start Time" />
+
+                    <Spinner
+                        android:id="@+id/hourClassStart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/minuteClassStart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/timeOfDayClassStart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <TextView android:text="End Time" />
+
+                    <Spinner
+                        android:id="@+id/hourClassEnd"
+                        android:dropDownHeight="50dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/minuteClassEnd"
+                        android:dropDownHeight="50dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/timeOfDayClassEnd"
+                        android:dropDownHeight="50dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/lab_time_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/class_time_table">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Recitation/Lab Time"
+                    android:textSize="16sp"
+                    android:layout_margin="3dp"/>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <CheckBox
+                        android:id="@+id/mondayRecitation"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="M" />
+
+                    <CheckBox
+                        android:id="@+id/tuesdayRecitation"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="T" />
+
+                    <CheckBox
+                        android:id="@+id/wednesdayRecitation"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="W" />
+
+                    <CheckBox
+                        android:id="@+id/thursdayRecitation"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="R" />
+
+                    <CheckBox
+                        android:id="@+id/fridayRecitation"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="F" />
+                </TableRow>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <TextView android:text="Start Time" />
+
+                    <Spinner
+                        android:id="@+id/hourRecitationStart"
+                        android:dropDownHeight="25dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/minuteRecitationStart"
+                        android:dropDownHeight="25dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/timeOfDayRecitationStart"
+                        android:dropDownHeight="25dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow android:gravity="center"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:text="End Time" />
+
+                    <Spinner
+                        android:id="@+id/hourRecitationEnd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/minuteRecitationEnd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/timeOfDayRecitationEnd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/done_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Done"
+            android:textSize="16sp"/>
+        <Button
+            android:id="@+id/cancel_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cancel"
+            android:onClick="goBackToViewAllCourses"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

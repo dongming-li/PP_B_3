@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Contacts-->
+    <string name="add_contact_email">Email</string>
+    <string name="add_contact_first_name">First name</string>
+    <string name="add_contact_group_id">Group ID</string>
+    <string name="add_contact_last_name">Last name</string>
+    <string name="add_contact_phone_number">Phone number xxxxxxxxxx</string>
+
+</resources>

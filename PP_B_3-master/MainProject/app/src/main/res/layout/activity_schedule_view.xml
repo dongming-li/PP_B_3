@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="coms309.mainproject.schedule.ScheduleView"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <!-- Calendar -->
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.363" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dateText">
+
+        <!-- Week Day Abbreviations -->
+        <LinearLayout
+            android:id="@+id/weekday_abbr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/sun_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Sun_abbr" />
+
+            <Button
+                android:id="@+id/mon_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Mon_abbr" />
+
+            <Button
+                android:id="@+id/tues_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Tues_abbr" />
+
+            <Button
+                android:id="@+id/wed_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Wed_abbr" />
+
+            <Button
+                android:id="@+id/thurs_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Thurs_abbr" />
+
+            <Button
+                android:id="@+id/fri_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Fri_abbr" />
+
+            <Button
+                android:id="@+id/sat_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/weekDay_Sat_abbr" />
+        </LinearLayout>
+
+        <!-- Week 1 -->
+        <LinearLayout
+            android:id="@+id/week1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weekday_abbr">
+
+            <Button
+                android:id="@+id/sunday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Week 2 -->
+        <LinearLayout
+            android:id="@+id/week2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week1">
+
+            <Button
+                android:id="@+id/sunday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Week 3 -->
+        <LinearLayout
+            android:id="@+id/week3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week2">
+
+            <Button
+                android:id="@+id/sunday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Week 4 -->
+        <LinearLayout
+            android:id="@+id/week4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week3">
+
+            <Button
+                android:id="@+id/sunday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Week 5 -->
+        <LinearLayout
+            android:id="@+id/week5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week4">
+
+            <Button
+                android:id="@+id/sunday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Week 6 (Bottom) -->
+        <LinearLayout
+            android:id="@+id/week6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week5">
+
+            <Button
+                android:id="@+id/sunday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/monday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/tuesday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/wednesday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/thursday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/friday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+
+            <Button
+                android:id="@+id/saturday6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/tag_dayOfWeek"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_addEvent"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="editEvent"
+        android:text="@string/button_add_event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <LinearLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"></LinearLayout>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="backToMenu"
+        android:text="@string/button_back_to_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/contacts_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="loadContacts"
+        android:text="@string/button_contacts_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_addEvent"
+        app:layout_constraintStart_toEndOf="@+id/cancel_button" />
+
+    <LinearLayout
+        android:id="@+id/monthNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button_addEvent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/prevMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lastMonth"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/currentMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/nextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="nextMonth"
+            android:text="Button" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

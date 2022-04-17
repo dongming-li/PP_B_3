@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Contacts List-->
+    <integer name="contacts_divider_height">1</integer>
+
+</resources>

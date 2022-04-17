@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Schedule View UI -->
+    <string name="Sample_Number">99</string>
+    <string name="weekDay_Sun_abbr">S</string>
+    <string name="weekDay_Mon_abbr">M</string>
+    <string name="weekDay_Tues_abbr">T</string>
+    <string name="weekDay_Wed_abbr">W</string>
+    <string name="weekDay_Thurs_abbr">R</string>
+    <string name="weekDay_Fri_abbr">F</string>
+    <string name="weekDay_Sat_abbr">S</string>
+    <string name="button_add_event">Add Event</string>
+    <string name="button_contacts_list">Contacts</string>
+
+    <!--Tags-->
+    <string name="tag_weekContainer">weekContainer</string>
+    <string name="tag_dayOfWeek">dayOfWeek</string>
+    <string name="tag_cellText">cellText</string>
+
+    <!-- New Event Form -->
+    <string name="event_form_title">Event Title: </string>
+    <string name="ef_hint_title">type title</string>
+
+    <string name="event_form_date">Date/Due: </string>
+    <string name="event_form_time">Start Time of Event: </string>
+
+    <string name="event_form_description">Memo: </string>
+    <string name="ef_hint_memo">write a note or description</string>
+
+    <string name="event_form_location">Location: </string>
+    <string name="ef_hint_location">Where is this event happening?</string>
+
+    <string name="event_form_type">Type of Event: </string>
+    <string-array name="event_form_types">
+        <item>Homework</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="button_create_event">Submit Event</string>
+
+    <!-- Edit Event Form -->
+    <string name="edit_form_heading">Edit Event</string>
+    <string name="edit_form_cancel">Cancel</string>
+    <string name="edit_form_delete">Delete</string>
+
+    <!-- Calendar Cell -->
+    <string name="tag_cell">Cell_View</string>
+    <string name="heading_main">Create New Event</string>
+
+    <string name="heading_classes">Classes</string>
+    <string name="heading_homework">Homework</string>
+    <string name="heading_groups">Group Events</string>
+    <string name="heading_others">Others</string>
+
+    <string name="button_backToCalendar">BACK</string>
+
+</resources>

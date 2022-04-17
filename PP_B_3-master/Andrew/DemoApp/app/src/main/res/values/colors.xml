@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Background colors-->
+    <color name="color_background_searchbar">#FFFFFF</color>
+    <color name="color_background_contacts">#C0C0C0</color>
+    <color name="color_contact">#DDDDDD</color>
+
+</resources>

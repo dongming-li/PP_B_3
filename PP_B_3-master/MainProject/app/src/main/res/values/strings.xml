@@ -1,0 +1,16 @@
+<resources>
+
+    <!--General Usage-->
+    <string name="empty"> </string>
+    <string name="app_name">Main Project</string>
+    <string name="button_back">GO BACK</string>
+    <string name="button_back_to_menu">MAIN MENU</string>
+    <string name="title_activity_event_form">EventFormActivity</string>
+    <string name="title_activity_add_group">AddGroup</string>
+    <string name="title_activity_individual_group">IndividualGroupActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Contacts-->
+    <string name="add_group_name">Group Name</string>
+    <string name="add_me">My User ID</string>
+    <string name="add_group_id">Group ID</string>
+
+</resources>

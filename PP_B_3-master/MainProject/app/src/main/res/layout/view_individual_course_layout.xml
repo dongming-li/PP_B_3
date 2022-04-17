@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!--Back button-->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:onClick="startViewAllCourses"
+            android:src="@mipmap/ic_back" />
+
+        <!--Course name-->
+        <TextView
+            android:id="@+id/individual_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/individual_course_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/individual_course_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/individual_course_class_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/individual_course_recitation_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:onClick="startDeleteCourse"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_delete" />
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:onClick="startEditCourse"
+                android:text="Edit Course" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
